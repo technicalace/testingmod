@@ -1,6 +1,8 @@
 package com.thatoneperson.testingmod;
 
 import com.mojang.logging.LogUtils;
+import com.thatoneperson.testingmod.item.ModItems;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -37,6 +39,8 @@ public class TestingMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -47,6 +51,12 @@ public class TestingMod
     private void commonSetup(final FMLCommonSetupEvent event)
     {
       
+    }
+
+    private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.BLACK_OPAL);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
