@@ -1,6 +1,7 @@
 package com.thatoneperson.testingmod;
 
 import com.mojang.logging.LogUtils;
+import com.thatoneperson.testingmod.item.ModCreativeModeTabs;
 import com.thatoneperson.testingmod.item.ModItems;
 
 import net.minecraft.client.Minecraft;
@@ -58,6 +59,12 @@ public class TestingMod
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.RAW_BLACK_OPAL);
+        }
+
+        if(event.getTab() == ModCreativeModeTabs.TESTING_TAB) {
+            event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.RAW_BLACK_OPAL);
         }
     }
 

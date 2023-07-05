@@ -1,3 +1,7 @@
 {
-    "item.testingmod.black_opal": "Black Opal"
+    "item.testingmod.black_opal": "Black Opal",
+    "item.testingmod.raw_black_opal": "Raw Black Opal",
+
+    "creativemodetab.testing_tab": "Testing Tab"
+
 }
