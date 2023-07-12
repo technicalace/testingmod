@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "testingmod:black_opal_ore",
+        "testingmod:black_opal_block",
+        "testingmod:deepslate_black_opal_ore",
+        "testingmod:netherrack_black_opal_ore",
+        "testingmod:endstone_black_opal_ore"
+    ]
+}
